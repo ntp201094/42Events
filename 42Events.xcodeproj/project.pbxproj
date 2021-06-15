@@ -28,6 +28,7 @@
 		025F517B267789E2002931B8 /* MenuSwitchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F5179267789E2002931B8 /* MenuSwitchItemCell.swift */; };
 		025F517C267789E2002931B8 /* MenuSwitchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025F517A267789E2002931B8 /* MenuSwitchItemCell.xib */; };
 		025F517E2677917A002931B8 /* SideMenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F517D2677917A002931B8 /* SideMenuSection.swift */; };
+		025F51822678F83A002931B8 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F51812678F83A002931B8 /* Date+Formatter.swift */; };
 		026DBB9226621C080050DD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DBB9126621C080050DD73 /* AppDelegate.swift */; };
 		026DBB9426621C080050DD73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DBB9326621C080050DD73 /* SceneDelegate.swift */; };
 		026DBB9B26621C0C0050DD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026DBB9A26621C0C0050DD73 /* Assets.xcassets */; };
@@ -93,6 +94,7 @@
 		025F5179267789E2002931B8 /* MenuSwitchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSwitchItemCell.swift; sourceTree = "<group>"; };
 		025F517A267789E2002931B8 /* MenuSwitchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuSwitchItemCell.xib; sourceTree = "<group>"; };
 		025F517D2677917A002931B8 /* SideMenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSection.swift; sourceTree = "<group>"; };
+		025F51812678F83A002931B8 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		026DBB8E26621C080050DD73 /* 42Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026DBB9126621C080050DD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026DBB9326621C080050DD73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				026DBBB826621FE60050DD73 /* UIKit+Helpers.swift */,
 				026DBBBA266220220050DD73 /* RxSwift+Operators.swift */,
 				026DBBBC266220300050DD73 /* RxCocoa+Binders.swift */,
+				025F51812678F83A002931B8 /* Date+Formatter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				026DBBB126621F1C0050DD73 /* Result.swift in Sources */,
 				026DBBEE26668B710050DD73 /* CategoryCell.swift in Sources */,
 				026DBBB326621F380050DD73 /* MainCoordinator.swift in Sources */,
+				025F51822678F83A002931B8 /* Date+Formatter.swift in Sources */,
 				025F51732674C82B002931B8 /* HomeCategoriesHeaderView.swift in Sources */,
 				025F5152267259FA002931B8 /* SideMenuController.swift in Sources */,
 				026DBBCC26623A610050DD73 /* HomeCarouselCell.swift in Sources */,

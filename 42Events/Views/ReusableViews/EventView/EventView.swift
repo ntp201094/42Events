@@ -7,6 +7,7 @@
 
 import UIKit
 import TagListView
+import Kingfisher
 
 final class EventView: UIView {
     @IBOutlet weak var imageView: UIImageView!
@@ -38,6 +39,19 @@ final class EventView: UIView {
         tagListView.marginY = 4.0
         tagListView.paddingX = 8.0
         tagListView.paddingY = 4.0
+    }
+    
+    func configure(imageURL: URL?, name: String, startDate: String, endDate: String, isFreeEngraving: Bool, tags: [String]) {
+        imageView.kf.setImage(with: imageURL,
+                              placeholder: nil,
+                              options: [.transition(ImageTransition.fade(0.5))],
+                              progressBlock: nil,
+                              completionHandler: { (result) in })
+        nameLabel.text = name
+        timeRangeLabel.text = "\(startDate) - \(endDate)"
+        freeMedalView.isHidden = !isFreeEngraving
+        tagListView.removeAllTags()
+        tagListView.addTags(tags)
     }
     
 }

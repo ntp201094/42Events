@@ -46,7 +46,7 @@ final class HomeEventsCell: UITableViewCell {
         let dateFormatter = ISO8601DateFormatter()
         dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
         Observable.just(viewModel.races)
-            .map({ races in races.map({ EventCellViewModel(race: $0, startDate: dateFormatter.date(from: $0.startDate) ?? Date(), endDate: dateFormatter.date(from: $0.endDate) ?? Date()) }) })
+            .map({ races in races.map { EventCellViewModel(race: $0, isMedal: false) } })
             .asDriver(onErrorJustReturn: [])
             .drive(collectionView.rx.items(cellIdentifier: "EventCell", cellType: EventCell.self)) { [weak self] index, item, cell in
                 cell.configure(viewModel: item)

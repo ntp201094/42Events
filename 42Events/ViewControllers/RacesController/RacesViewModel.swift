@@ -54,11 +54,9 @@ enum RacesViewModel: ViewModelType {
                 .share(replay: 1)
             
             let sections = Observable.combineLatest(races, medalViewChanged) { races, isMedal -> [RacesSection] in
-                let dateFormatter = ISO8601DateFormatter()
-                dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
                 return [
                     .races(title: "\(races.count) \(category.rawValue) events", items: races.map {
-                        let viewModel = EventCellViewModel(race: $0, startDate: dateFormatter.date(from: $0.startDate) ?? Date(), endDate: dateFormatter.date(from: $0.endDate) ?? Date())
+                        let viewModel = EventCellViewModel(race: $0, isMedal: isMedal)
                         return isMedal ? .medalRace(viewModel: viewModel) : .race(viewModel: viewModel)
                     })
                 ]

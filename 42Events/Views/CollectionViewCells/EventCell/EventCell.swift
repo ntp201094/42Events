@@ -27,20 +27,7 @@ final class EventCell: UICollectionViewCell {
     }
     
     func configure(viewModel: EventCellViewModel) {
-        let startDateFormatter = DateFormatter()
-        startDateFormatter.dateFormat = "dd MMM yyyy (HH:mm)"
-        let endDateFormatter = DateFormatter()
-        endDateFormatter.dateFormat = "dd MMM yyyy (HH:mm) O"
-        eventView.imageView.kf.setImage(with: viewModel.imageURL(isMedal: false),
-                                        placeholder: nil,
-                                        options: [.transition(ImageTransition.fade(0.5))],
-                                        progressBlock: nil,
-                                        completionHandler: { (result) in })
-        eventView.nameLabel.text = viewModel.race.name
-        eventView.timeRangeLabel.text = "\(startDateFormatter.string(from: viewModel.startDate)) - \(endDateFormatter.string(from: viewModel.endDate))"
-        eventView.freeMedalView.isHidden = !viewModel.race.isFreeEngraving
-        eventView.tagListView.removeAllTags()
-        eventView.tagListView.addTags(viewModel.tags.map { $0.title })
+        eventView.configure(imageURL: viewModel.imageURL, name: viewModel.name, startDate: viewModel.startDate, endDate: viewModel.endDate, isFreeEngraving: viewModel.isFreeEngraving, tags: viewModel.tags.map { $0.title })
     }
     
 }

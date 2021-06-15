@@ -13,11 +13,20 @@ struct TagViewModel {
 }
 
 struct EventCellViewModel {
-    let race: Race
-    let startDate: Date
-    let endDate: Date
+    let name: String
+    let imageURL: URL?
+    let isFreeEngraving: Bool
+    let startDate: String
+    let endDate: String
+    let tags: [TagViewModel]
     
-    var tags: [TagViewModel] {
+    init(race: Race, isMedal: Bool) {
+        self.name = race.name
+        self.imageURL = URL(string: isMedal ? race.medalImageURL : race.imageURL)
+        self.isFreeEngraving = race.isFreeEngraving
+        self.startDate = (Formatter.date(from: race.startDate) ?? Date()).toStartString()
+        self.endDate = (Formatter.date(from: race.endDate) ?? Date()).toEndString()
+        
         var tags: [TagViewModel] = []
         if let category = Category(rawValue: race.sportType) {
             tags.append(TagViewModel(imageName: "\(category.rawValue)-icon", title: category.displayName))
@@ -32,10 +41,6 @@ struct EventCellViewModel {
             tags.append(TagViewModel(imageName: nil, title: race.eventType))
         }
         tags.append(contentsOf: race.categories?.compactMap({ $0.isEmpty ? nil : TagViewModel(imageName: nil, title: $0) }) ?? [])
-        return tags
-    }
-    
-    func imageURL(isMedal: Bool) -> URL? {
-        URL(string: isMedal ? race.medalImageURL : race.imageURL)
+        self.tags = tags
     }
 }

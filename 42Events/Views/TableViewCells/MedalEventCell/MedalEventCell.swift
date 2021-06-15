@@ -24,6 +24,7 @@ final class MedalEventCell: UITableViewCell {
         thumbnailImageView.layer.masksToBounds = true
         titleLabel.font = .systemFont(ofSize: 16, weight: .bold)
         subtitleLabel.font = .systemFont(ofSize: 12, weight: .thin)
+        subtitleLabel.numberOfLines = 2
         tagListView.textFont = .systemFont(ofSize: 14, weight: .light)
         tagListView.textColor = .label
         tagListView.borderColor = .systemGray
@@ -37,17 +38,13 @@ final class MedalEventCell: UITableViewCell {
     }
     
     func configure(viewModel: EventCellViewModel) {
-        let startDateFormatter = DateFormatter()
-        startDateFormatter.dateFormat = "dd MMM yyyy (HH:mm)"
-        let endDateFormatter = DateFormatter()
-        endDateFormatter.dateFormat = "dd MMM yyyy (HH:mm) O"
-        thumbnailImageView.kf.setImage(with: viewModel.imageURL(isMedal: true),
-                                        placeholder: nil,
-                                        options: [.transition(ImageTransition.fade(0.5))],
-                                        progressBlock: nil,
-                                        completionHandler: { (result) in })
-        titleLabel.text = viewModel.race.name
-        subtitleLabel.text = "\(startDateFormatter.string(from: viewModel.startDate)) - \(endDateFormatter.string(from: viewModel.endDate))"
+        thumbnailImageView.kf.setImage(with: viewModel.imageURL,
+                              placeholder: nil,
+                              options: [.transition(ImageTransition.fade(0.5))],
+                              progressBlock: nil,
+                              completionHandler: { (result) in })
+        titleLabel.text = viewModel.name
+        subtitleLabel.text = "\(viewModel.startDate) - \(viewModel.endDate)"
         tagListView.removeAllTags()
         tagListView.addTags(viewModel.tags.map { $0.title })
     }
