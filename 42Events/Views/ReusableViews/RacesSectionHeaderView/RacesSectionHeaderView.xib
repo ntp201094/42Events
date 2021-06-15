@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RacesSectionHeaderView" customModule="_2Events" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7u-MN-yM1">
+                    <rect key="frame" x="299" y="74.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jlb-5d-RJp">
+                    <rect key="frame" x="349" y="69.5" width="51" height="31"/>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9h-5h-dtQ">
+                    <rect key="frame" x="16" y="74.5" width="275" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jlb-5d-RJp" firstAttribute="centerY" secondItem="G7u-MN-yM1" secondAttribute="centerY" id="4uG-9e-FNM"/>
+                <constraint firstItem="D9h-5h-dtQ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="E3N-CA-QGW"/>
+                <constraint firstItem="G7u-MN-yM1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Iho-pN-MEl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jlb-5d-RJp" secondAttribute="trailing" constant="16" id="fun-NZ-3I9"/>
+                <constraint firstItem="jlb-5d-RJp" firstAttribute="leading" secondItem="G7u-MN-yM1" secondAttribute="trailing" constant="8" id="rvu-kr-5KE"/>
+                <constraint firstItem="D9h-5h-dtQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="xfe-Lf-dtw"/>
+                <constraint firstItem="G7u-MN-yM1" firstAttribute="leading" secondItem="D9h-5h-dtQ" secondAttribute="trailing" constant="8" id="yqf-tR-jbg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="G7u-MN-yM1" id="tdN-S8-Aqy"/>
+                <outlet property="switchView" destination="jlb-5d-RJp" id="ifb-aI-xLV"/>
+                <outlet property="titleLabel" destination="D9h-5h-dtQ" id="Cb7-97-NSd"/>
+            </connections>
+            <point key="canvasLocation" x="-30.434782608695656" y="-196.875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+PODS:
+  - Differentiator (5.0.0)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/Kingfisher (1.9.2):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
+  - Kingfisher (6.3.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - SideMenu (6.5.0)
+  - TagListView (1.4.1)
+
+DEPENDENCIES:
+  - ImageSlideshow (~> 1.9.0)
+  - ImageSlideshow/Kingfisher
+  - Kingfisher (~> 6.0)
+  - RxCocoa (= 6.1.0)
+  - RxDataSources
+  - RxOptional
+  - RxSwift (= 6.1.0)
+  - SideMenu
+  - TagListView (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - ImageSlideshow
+    - Kingfisher
+    - RxCocoa
+    - RxDataSources
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - SideMenu
+    - TagListView
+
+SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+
+PODFILE CHECKSUM: 793a37a75afffcfca549084266f191f2074fec25
+
+COCOAPODS: 1.10.1
